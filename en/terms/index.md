@@ -1,3 +1,7 @@
+---
+title: Terms of Use
+---
+
 # Terms of Use
 
 **Last Updated: July 10, 2026**
