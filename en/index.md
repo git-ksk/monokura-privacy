@@ -76,7 +76,7 @@ We do not provide personal information to third parties except in the following 
 
 - **Sharing with Board Members**: Members of the same board can view board item data, history, reminder locations, display names, and related shared data.
 - **Service Providers**: The App uses the following third-party services. Please also refer to each service's privacy policy.
-  - [Google Firebase](https://firebase.google.com/support/privacy) (authentication, database, Functions, Remote Config, and Analytics)
+  - [Google Firebase](https://firebase.google.com/support/privacy) (authentication, data storage, app configuration, and usage analytics)
   - [RevenueCat](https://www.revenuecat.com/privacy/) (subscription management)
   - [Apple](https://www.apple.com/legal/privacy/) (App Store payments, Sign in with Apple, notifications, location permission, and other OS features)
 - **Legal Requests**: When disclosure is required by law or valid legal process.

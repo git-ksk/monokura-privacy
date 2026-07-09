@@ -76,7 +76,7 @@
 
 - **ボードメンバーへの共有**: 同じボードに参加しているメンバーは、ボード内のアイテムデータ、履歴、通知地点、表示名などを閲覧できます。
 - **サービスプロバイダー**: 本アプリは以下のサードパーティサービスを利用しています。各サービスのプライバシーポリシーもご参照ください。
-  - [Google Firebase](https://firebase.google.com/support/privacy)（認証、データベース、Functions、Remote Config、Analytics）
+  - [Google Firebase](https://firebase.google.com/support/privacy)（認証、データ保存、アプリ設定、利用状況分析）
   - [RevenueCat](https://www.revenuecat.com/privacy/)（サブスクリプション管理）
   - [Apple](https://www.apple.com/legal/privacy/)（App Store決済、サインイン、通知、位置情報許可などのOS機能）
 - **法的要請**: 法令に基づく開示要請がある場合
