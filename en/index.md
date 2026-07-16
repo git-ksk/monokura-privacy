@@ -1,6 +1,6 @@
 # Privacy Policy
 
-**Last Updated: July 10, 2026**
+**Last Updated: July 17, 2026**
 
 This Privacy Policy explains how Monokura (the "App") collects, uses, and protects information when you use the App. "We", "us", and "our" refer to the developer of the App.
 
@@ -26,8 +26,10 @@ The following data may be stored when you use the App:
 - Shopping list, inventory, and rolling stock item information, including names, quantities, units, categories, and notes
 - Purchase history, consumption history, and item change history
 - Reminder location names, latitude, longitude, and notification radius
+- Saved photos selected by Monokura Plus users and shared with members of the same board
+- Recipe cover photos (available on Free) and recipe step photos (available on Monokura Plus), shared only with members of the same board
 
-This data is stored in Google Firebase (Cloud Firestore) and shared with members of the same board.
+This data is stored in Google Firebase (Cloud Firestore for records and Cloud Storage for saved photo files) and shared with members of the same board.
 
 ### 1.3 Location Information
 
@@ -74,7 +76,8 @@ We use the collected information for the following purposes:
 
 We do not provide personal information to third parties except in the following cases:
 
-- **Sharing with Board Members**: Members of the same board can view board item data, history, reminder locations, display names, and related shared data.
+- **Sharing with Board Members**: Members of the same board can view board item data, saved photos, history, reminder locations, display names, and related shared data.
+- **Saved Photo Operations**: Board members may add saved photos and link them to items. Only the board owner or the user who uploaded a photo may delete it. Deleting a photo also removes its links from every item using it.
 - **Service Providers**: The App uses the following third-party services. Please also refer to each service's privacy policy.
   - [Google Firebase](https://firebase.google.com/support/privacy) (authentication, data storage, app configuration, and usage analytics)
   - [RevenueCat](https://www.revenuecat.com/privacy/) (subscription management)
@@ -85,7 +88,7 @@ We do not provide personal information to third parties except in the following 
 
 ## 4. Data Storage and Security
 
-- User data is stored on Google Firebase (Cloud Firestore) servers.
+- User data is stored on Google Firebase servers (Cloud Firestore for records and Cloud Storage for saved photo files).
 - Firebase security rules and Cloud Functions are used to restrict access to your own data and boards you participate in.
 - Data transmission is encrypted using TLS.
 - Because shared boards may contain sensitive notes, locations, or other personal content, please be careful about what you enter and share.
@@ -94,9 +97,12 @@ We do not provide personal information to third parties except in the following 
 
 ## 5. Data Retention and Deletion
 
-- **Account Deletion**: You can delete your account from the settings screen. When your account is deleted, your user profile, owned boards, and related data are deleted.
+- **Account Deletion**: After reauthentication, you can request account deletion from Settings. A retryable server-side job deletes and verifies related data, including photos on boards you own, before deleting the authentication account. Temporary failures are retried safely.
 - **Subscriptions**: Deleting your account does not cancel App Store subscriptions. Please cancel subscriptions from your Apple Account subscription management screen.
 - **History, prediction, and refill-waiting data**: Depending on App functionality and plan limits, data exceeding certain counts or retention periods may be deleted or trimmed.
+- **Saved photos**: When Monokura Plus expires, photos are immediately hidden and cannot be selected. Photo files and metadata are retained for seven days after expiration and become visible again if Plus is restored during that period. If Plus remains inactive for seven days, the photo files in Cloud Storage, photo metadata in Cloud Firestore, and photo links on all items are deleted. Cloud Storage soft delete is configured for seven days for disaster recovery, so a recovery copy may remain for up to seven additional days after normal access is removed. Complete deletion may therefore take up to 14 days after Plus expires.
+- **Inappropriate saved photos**: To report a photo, email the contact address below with the board name, information sufficient to identify the photo, and the reason for reporting. A board owner can remove a member from the board, and other members can leave the board. We review reports and may disable or delete content or take action on an account where appropriate.
+- **Recipe photos**: Recipes and their cover/step photos are private board data. Cover photos are limited to one per recipe on Free; step photos require Plus. Only the recipe creator or board owner may delete recipe photos. Deleting a recipe also deletes its recipe photos. Step photos are hidden immediately after Plus expires and deleted from Storage, metadata, and step references after seven days; restoring Plus during the grace period preserves them.
 - **Guest Mode**: In guest mode, data is stored only in local storage on the device and is not sent to the server. Local data is automatically cleared when you log in.
 
 ---
